@@ -23,7 +23,7 @@ $CONDA config --set auto_activate_base false
 
 and restart the shell.  The last line will prevent the `base` environment from being loaded when the shell is launched (so that you have access from the shell to whatever Python you had first on your path, e.g., macOS's Python).
 
-After restarting the shell, `which conda` should *definitely* point to the `conda` binary, and the remaining instructions assume that, if that's not the case, let David know!
+After restarting the shell, `which conda` should *definitely* point to the `conda` binary, and the remaining instructions assume that.  If that's not the case, let David know!
 
 Once the shell is set up, activating is done by
 
