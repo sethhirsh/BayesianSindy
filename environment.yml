@@ -81,5 +81,3 @@ dependencies:
     - webencodings==0.5.1
     - xarray==0.14.1
     - zipp==2.0.0
-prefix: /Users/bara947/.local/miniconda/envs/mars
-
