@@ -28,7 +28,7 @@ After restarting the shell, `which conda` should *definitely* point to the `cond
 Once the shell is set up, activating is done by
 
 ```bash
-CONDA activate mars
+conda activate mars
 ```
 
 which will add a `(mars)` prefix to the prompt.  After this, `which python` and  `which jupyter` should point to the `mars` environment's Python and Jupyter, respectively.  You can then launch Jupyter the usual way: `jupyter lab`.
@@ -36,7 +36,7 @@ which will add a `(mars)` prefix to the prompt.  After this, `which python` and 
 To deactivate the environment, do
 
 ```bash
-CONDA deactivate
+conda deactivate
 ```
 
 After this, `which python` should point to the whatever other Python you had on your path with first priority.
