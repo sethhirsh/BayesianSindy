@@ -1,8 +1,8 @@
-# BayesianSindy
+# UQSindy
 
 Working repo for the PNNL MARS project "Probabilistic Model Discovery with Uncertainty Quantification"
 
-## Creating the environment
+## Creating the environment from `.yml` file
 
 With the `.yml` file it suffices to say
 
@@ -40,3 +40,26 @@ conda deactivate
 ```
 
 After this, `which python` should point to the whatever other Python you had on your path with first priority.
+
+## Environment for `sunode`
+
+First check out `sunode` and step onto the downloaded folder, e.g.:
+
+```
+cd ~/src
+git clone https://github.com/aseyboldt/sunode.git
+cd sunode
+```
+
+With `conda` activated, and while stepping onto the `sunode` source folder, create a new environment `mars-sunode`:
+
+```
+conda create -n mars-sunode -q --yes -c conda-forge python=3.7 conda-build conda-verify coverage pytest hypothesis statsmodels
+conda activate mars-sunode
+conda-build -c conda-forge ./conda
+conda install --yes -c $CONDA_PREFIX/conda-bld/ -c conda-forge sunode
+conda install mkl-service
+pip install pymc3 jupyterlab
+```
+
+After that you can deactivate and activate the `mars-sunode` environment at your convenience.
