@@ -99,10 +99,6 @@ with model_sunode:
             t0=t_vals[0],
         )
 
-
-    import sunode
-    lib = sunode._cvodes.lib
-    lib.CVodeSStolerances(solver._ode, 1e-10, 1e-10)
     #import pysindy as ps
     #from pysindy.differentiation import SmoothedFiniteDifference
     #sfd = SmoothedFiniteDifference(smoother_kws={'window_length': 5})
